@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 视频剪辑 — 试课（图片版）</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style-source.css">
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+  <nav class="nav-dots" id="navDots" aria-label="Slide navigation"></nav>
+
+  <!-- ===== 01 封面 ===== -->
+  <section id="slide-01" class="slide dark title-slide" data-kicker="E01 / OPEN">
+    <div class="slide-content">
+      <div class="title-grid">
+        <div class="title-copy">
+          <p class="eyebrow reveal">Session 1 / AI Video Editing</p>
+          <h1 class="reveal"><span>AI 视频剪辑</span><span>从生成到交付</span></h1>
+          <p class="lede reveal">掌握生成式 AI 视频全流程，从策划到剪辑的完整工作链路。</p>
+        </div>
+        <img class="hero-asset reveal" src="assets/08-skill-workflow.svg" alt="">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 02 核心问题 ===== -->
+  <section id="slide-02" class="slide light" data-kicker="E02 / WORKFLOW">
+    <div class="slide-content">
+      <div class="copy-block wide">
+        <h2 class="reveal">核心问题</h2>
+        <p class="body-text reveal">有了产品 brief，生成一条可预览的 AI 视频需要几步？</p>
+        <div class="card-grid two reveal">
+          <article class="info-card">
+            <strong>传统方式</strong>
+            <span>策划 → 拍摄 → 剪辑 → 后期，周期长、成本高</span>
+          </article>
+          <article class="info-card">
+            <strong>AI 方式</strong>
+            <span>策划 → 提示词 → 文生图 → 文生视频 → 剪辑 → 交付</span>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 03 标准六步流程 ===== -->
+  <section id="slide-03" class="slide dark" data-kicker="E03 / WORKFLOW">
+    <div class="slide-content">
+      <div class="copy-block wide">
+        <h2 class="reveal">标准六步流程</h2>
+        <div class="flow reveal">
+          <span class="node">① 视频策划</span>
+          <span class="arrow">→</span>
+          <span class="node">② 撰写提示词</span>
+          <span class="arrow">→</span>
+          <span class="node">③ 文生图</span>
+          <span class="arrow">→</span>
+          <span class="node">④ 文生视频</span>
+          <span class="arrow">→</span>
+          <span class="node">⑤ 剪辑</span>
+          <span class="arrow">→</span>
+          <span class="node">⑥ 交付</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 04 各步骤产出 ===== -->
+  <section id="slide-04" class="slide light" data-kicker="E04 / WORKFLOW">
+    <div class="slide-content">
+      <div class="copy-block wide">
+        <h2 class="reveal">各步骤关键产出</h2>
+        <div class="card-grid three reveal">
+          <article class="info-card"><strong>视频策划</strong><span>分镜脚本、视觉风格定义</span></article>
+          <article class="info-card"><strong>撰写提示词</strong><span>文生图 & 文生视频的 Prompt</span></article>
+          <article class="info-card"><strong>文生图</strong><span>分镜关键帧图片（即梦/可灵/星流）</span></article>
+          <article class="info-card"><strong>文生视频</strong><span>单镜头视频片段（即梦/可灵/vidu）</span></article>
+          <article class="info-card"><strong>剪辑</strong><span>完整成片（剪映/AI剪辑）</span></article>
+          <article class="info-card"><strong>交付</strong><span>按客户要求输出最终视频文件</span></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 05 常用平台对比 ===== -->
+  <section id="slide-05" class="slide dark" data-kicker="E05 / PLATFORMS">
+    <div class="slide-content">
+      <div class="copy-block wide">
+        <h2 class="reveal">常用平台对比</h2>
+        <div class="card-grid two reveal">
+          <article class="info-card"><strong>即梦</strong><span>❌ 不支持真人直接上传｜自研模型｜动画/虚拟角色/风格化视频</span></article>
+          <article class="info-card"><strong>可灵</strong><span>✅ 支持真人上传｜自研模型｜真实人物驱动/换脸/数字人</span></article>
+          <article class="info-card"><strong>星流</strong><span>Midjourney v7、Image 1.5｜高质量风格化图片生成</span></article>
+          <article class="info-card"><strong>RunningHub / TapNow / LibTV</strong><span>多模型聚合｜多模型对比/快速试错</span></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 06 平台趋势 ===== -->
+  <section id="slide-06" class="slide light" data-kicker="E06 / PLATFORMS">
+    <div class="slide-content">
+      <div class="split-layout">
+        <div class="copy-block">
+          <h2 class="reveal">平台趋势</h2>
+          <p class="body-text reveal">目前平台开始接入插件、鼓励制作 Skill、引入 3D 模型进行人物动作和空间关系的固定。</p>
+          <p class="body-text reveal">消耗的积分必然更高，但在会使用的情况下，稳定性和质量都会更好。</p>
+        </div>
+        <div class="media-block reveal">
+        <img class="asset" src="assets/image-20260719101515.png" alt="平台插件与Skill趋势">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 07 场景化平台推荐 ===== -->
+  <section id="slide-07" class="slide dark" data-kicker="E07 / PLATFORMS">
+    <div class="slide-content">
+      <div class="copy-block wide">
+        <h2 class="reveal">场景化平台推荐</h2>
+        <div class="card-grid three reveal">
+          <article class="info-card"><strong>🎭 皮克斯/3D 动画广告</strong><span>即梦（图片+视频）｜3D 动画质感最好，中文 prompt 友好，高速运动表现优良</span></article>
+          <article class="info-card"><strong>🧑 真人剧情片/广告</strong><span>可灵（图片+视频）｜唯一支持真人上传，人物较为真实</span></article>
+          <article class="info-card"><strong>🎨 高质量风格化海报/关键帧</strong><span>星流（Midjourney v7）｜艺术风格最丰富，关键帧质量上限高</span></article>
+          <article class="info-card"><strong>📱 短视频带货/快速出片</strong><span>即梦（全流程）｜出图出视频都快，积分消耗可控</span></article>
+          <article class="info-card"><strong>🎬 品牌宣传片（多风格混合）</strong><span>星流出图 + 可灵出视频｜图用 MJ 保证风格质量，视频用可灵保证流畅</span></article>
+          <article class="info-card"><strong>🧪 多模型对比/选型阶段</strong><span>TapNow / RunningHub / LibTV｜一次输入多模型对比，快速选型</span></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 08 选型决策 ===== -->
+  <section id="slide-08" class="slide light" data-kicker="E08 / PLATFORMS">
+    <div class="slide-content">
+      <div class="split-layout">
+        <div class="copy-block">
+          <h2 class="reveal">选型决策建议</h2>
+          <div class="flow reveal">
+            <span class="node">是否需要真人？</span>
+            <span class="arrow">→</span>
+            <span class="node">风格要求（写实/动画/艺术）</span>
+            <span class="arrow">→</span>
+            <span class="node">根据预算选择</span>
+          </div>
+          <div class="card-grid two reveal" style="margin-top: var(--gap);">
+            <article class="info-card"><strong>性价比优先</strong><span>即梦全流程，积分消耗可控</span></article>
+            <article class="info-card"><strong>质量上限优先</strong><span>星流出图 + 可灵出视频</span></article>
+          </div>
+          <p class="note reveal" style="margin-top: var(--gap);">另一种搭配：Obsidian 做媒资管理，Codex 读取 OB 的人物设定、剧情设定、分镜等，利用 GPT 统一生图，最后用生成视频类工具进行视频制作。</p>
+        </div>
+        <div class="media-block reveal">
+        <img class="asset" src="assets/image-20260719102222.png" alt="制作平台无限画布">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 09 提示词万能公式 ===== -->
+  <section id="slide-09" class="slide dark" data-kicker="E09 / PROMPT">
+    <div class="slide-content">
+      <div class="copy-block wide">
+        <h2 class="reveal">提示词万能公式</h2>
+        <p class="body-text reveal">Seedance 2.0 的提示词遵循以下结构。清晰的结构化提示词能让 AI 精准理解创作意图，避免"写了很长但出图不准"的问题。</p>
+        <div class="flow reveal">
+          <span class="node">主体</span>
+          <span class="arrow">+</span>
+          <span class="node">动作</span>
+          <span class="arrow">+</span>
+          <span class="node">场景</span>
+          <span class="arrow">+</span>
+          <span class="node">光影</span>
+          <span class="arrow">+</span>
+          <span class="node">镜头语言</span>
+          <span class="arrow">+</span>
+          <span class="node">风格</span>
+          <span class="arrow">+</span>
+          <span class="node">画质</span>
+          <span class="arrow">+</span>
+          <span class="node">约束</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 10 基础版 vs 进阶版 ===== -->
+  <section id="slide-10" class="slide light" data-kicker="E10 / PROMPT">
+    <div class="slide-content">
+      <div class="copy-block wide">
+        <h2 class="reveal">基础版 vs 进阶版</h2>
+        <div class="card-grid two reveal">
+          <article class="info-card">
+            <strong>基础版</strong>
+            <span>一位年轻女生在海边慢走，微风拂动头发，微笑看向镜头，黄昏暖光，4K 高清，电影感，稳定运镜，画面流畅不抖动，细节清晰</span>
+          </article>
+          <article class="info-card">
+            <strong>进阶版公式</strong>
+            <span>[核心主体] 在 [特定场景] 完成 [叙事动作]，[时长+精准运镜+焦点锁定]，[焦段+光圈+画幅]，[布光+核心色调]，[电影胶片型号+调色标准]，[锁种跟焦+动态运镜平滑+元素防穿模+4K]</span>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 11 公式拆解 ===== -->
+  <section id="slide-11" class="slide dark" data-kicker="E11 / PROMPT">
+    <div class="slide-content">
+      <div class="copy-block wide">
+        <h2 class="reveal">公式拆解说明</h2>
+        <div class="card-grid three reveal">
+          <article class="info-card"><strong>核心主体</strong><span>明确画面主角｜例：一位年轻女生</span></article>
+          <article class="info-card"><strong>特定场景</strong><span>提供环境上下文｜例：海边沙滩</span></article>
+          <article class="info-card"><strong>叙事动作</strong><span>定义角色行为｜例：慢走、微笑看向镜头</span></article>
+          <article class="info-card"><strong>运镜 & 焦点</strong><span>控制镜头运动方式｜例：稳定运镜、焦点锁定面部</span></article>
+          <article class="info-card"><strong>焦段 & 光圈</strong><span>决定景深和视角｜例：50mm、f/1.8、16:9</span></article>
+          <article class="info-card"><strong>布光 & 色调</strong><span>营造氛围｜例：黄昏暖光、金色侧逆光</span></article>
+        </div>
+        <p class="note reveal" style="margin-top: var(--gap);">不等于 prompt 越长越好。保证【主体】、【场景】、【音乐】（只生成音效）、【镜头】即可。上传过参考图就不需要再花大段文字阐述。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 12 负面提示词 ===== -->
+  <section id="slide-12" class="slide light" data-kicker="E12 / PROMPT">
+    <div class="slide-content">
+      <div class="copy-block wide">
+        <h2 class="reveal">负面提示词（Negative Prompt）</h2>
+        <p class="body-text reveal">告诉 AI "不要出现什么"，和正面提示词同样重要。AI 模型有默认倾向（完美皮肤、过度饱和、多手指），仅靠正面描述无法抑制。</p>
+        <div class="card-grid three reveal">
+          <article class="info-card"><strong>画质问题</strong><span>畸形手指、多余肢体、面部扭曲、低清模糊｜所有人物生成</span></article>
+          <article class="info-card"><strong>风格偏差</strong><span>真人照片感（做动画时）、恐怖氛围、赛博朋克｜风格化项目</span></article>
+          <article class="info-card"><strong>文字干扰</strong><span>杂乱乱码文字、品牌 logo、水印｜广告/商业项目</span></article>
+          <article class="info-card"><strong>构图问题</strong><span>多余人物、杂乱背景、过度反光塑料感｜产品广告</span></article>
+          <article class="info-card"><strong>情绪溢出</strong><span>哭泣崩溃（写疲惫时）、过度煽情、暴力｜情绪叙事</span></article>
+          <article class="info-card"><strong>实践建议</strong><span>5-10 个关键词即可，针对每次翻车的具体问题动态添加，不同镜头负面提示词可能不同</span></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 13 模板一：产品广告 ===== -->
+  <section id="slide-13" class="slide dark" data-kicker="E13 / TEMPLATE">
+    <div class="slide-content">
+      <div class="copy-block wide">
+        <h2 class="reveal">模板一：产品广告</h2>
+        <p class="body-text reveal">适用场景：30 秒产品宣传视频，需要突出产品卖点和使用场景。</p>
+        <div class="codebox reveal">[产品名称/类型] 放置在 [具体场景] 中，[核心卖点动作或效果]。
+[人物（可选）] 与产品互动：[具体交互动作]。
+[光线方案]：[主光源方向 + 色温 + 氛围词]。
+[镜头语言]：[焦段] [景别] [运镜方式]，焦点锁定 [产品/人物面部]。
+[风格]：[3D动画/写实/电影感] 广告片质感，[色调描述]。
+[画质约束]：4K 高清，材质细腻，[产品材质描述]。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 14 产品广告示例 ===== -->
+  <section id="slide-14" class="slide light" data-kicker="E14 / TEMPLATE">
+    <div class="slide-content">
+      <div class="split-layout">
+        <div class="copy-block">
+          <h2 class="reveal">产品广告示例（音响）</h2>
+          <div class="codebox reveal">哑光深灰圆角智能音响放置在现代小书房桌面上，顶部光环亮起发出柔和暖色声波。年轻女性产品经理坐在电脑后方，被声波吸引抬眼。电脑冷光为主光源，音响暖光为辅。35mm 中近景，缓慢推向音响，焦点锁定光环。皮克斯式 3D 动画广告质感，冷蓝环境中出现一点温暖声波。4K 高清，哑光音响材质和蓬松头发清晰可见。</div>
+          <p class="note reveal">负面 Prompt：真人照片感、恐怖氛围、过暗画面、赛博朋克、杂乱乱码文字、品牌 logo、低质塑料音响、畸形手指、多余人物、过度写实皮肤、强烈噪点、字幕</p>
+        </div>
+        <div class="media-block reveal">
+        <img class="asset" src="assets/image-20260719104133.png" alt="产品广告效果图">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 15 模板二：品牌宣传片 ===== -->
+  <section id="slide-15" class="slide dark" data-kicker="E15 / TEMPLATE">
+    <div class="slide-content">
+      <div class="copy-block wide">
+        <h2 class="reveal">模板二：品牌宣传片</h2>
+        <p class="body-text reveal">适用场景：品牌形象片、企业宣传、活动预热，偏氛围和调性。</p>
+        <div class="codebox reveal">[品牌调性关键词] 的画面氛围，[核心视觉符号/场景] 作为主体。
+[环境描写]：[建筑/自然/室内空间] + [时间/天气/光线]。
+[人物群像（可选）]：[角色状态] + [与环境的互动方式]。
+[镜头语言]：[焦段] [景别]，[运镜方式]，[节奏：缓慢/快切/呼吸感]。
+[色彩体系]：[主色调] + [辅助色] + [情绪色调变化]。
+[风格]：[电影感/纪录片/广告片] 质感，[参考导演/影片风格]。
+[画质约束]：4K 高清，[胶片型号/调色标准]，画面干净无噪点。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 16 品牌宣传片示例 ===== -->
+  <section id="slide-16" class="slide light" data-kicker="E16 / TEMPLATE">
+    <div class="slide-content">
+      <div class="split-layout">
+        <div class="copy-block">
+          <h2 class="reveal">品牌宣传片示例</h2>
+          <div class="codebox reveal">温暖而现代的品牌氛围画面，城市天际线在黄昏中缓缓亮起灯光。玻璃幕墙建筑反射金色夕阳，街道上行人步履从容。35mm 中景，缓慢横移推近，呼吸感节奏。主色调为暖金色和深蓝过渡，辅助色为城市霓虹的柔和点缀。电影感广告片质感，参考苹果品牌片风格。4K 高清，柯达 2383 胶片调色，画面干净通透。</div>
+          <p class="note reveal">负面 Prompt：杂乱广告牌、品牌 logo（非自家）、过度饱和、手机拍摄感、抖动画面、文字水印</p>
+        </div>
+        <div class="media-block reveal">
+        <img class="asset" src="assets/image-20260719104144.png" alt="品牌宣传片效果图">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 17 模板三：MG 动画 ===== -->
+  <section id="slide-17" class="slide dark" data-kicker="E17 / TEMPLATE">
+    <div class="slide-content">
+      <div class="copy-block wide">
+        <h2 class="reveal">模板三：MG 动画</h2>
+        <p class="body-text reveal">适用场景：程序化动画、数据可视化、Logo 演绎、产品功能演示。</p>
+        <div class="codebox reveal">[动画类型] 风格的 MG 动画画面，[核心元素/Logo] 作为视觉中心。
+[动画动作]：[元素入场方式] → [变形/数据增长/路径运动] → [收束方式]。
+[配色方案]：[主色] + [辅助色] + [背景色]，[渐变方向]。
+[图形语言]：[几何形状/线条/粒子] + [运动节奏：弹跳/流畅/阶梯式]。
+[镜头/画面]：16:9，[居中/黄金分割] 构图，[整体视角/局部特写]。
+[风格]：扁平化/2.5D/3D MG 动画，[参考风格]。
+[技术约束]：[帧率] [分辨率]，[渲染要求]。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 18 提示词邪修 ===== -->
+  <section id="slide-18" class="slide light" data-kicker="E18 / PROMPT">
+    <div class="slide-content">
+      <div class="copy-block wide">
+        <h2 class="reveal">提示词邪修</h2>
+        <p class="body-text reveal">由于提示词污染或者是 AI 幻觉，需要根据实际情况，讲一些不符合创作的"邪修"提示词。</p>
+        <div class="card-grid two reveal">
+          <article class="info-card"><strong>提示词污染</strong><span>模型训练数据中某些词汇有隐含含义，导致生成偏差</span></article>
+          <article class="info-card"><strong>AI 幻觉</strong><span>模型"发挥"出不在提示词中的元素，需要用非常规手段约束</span></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 19 真人视频：调动脸部 ===== -->
+  <section id="slide-19" class="slide dark" data-kicker="E19 / REALFACE">
+    <div class="slide-content">
+      <div class="copy-block wide">
+        <h2 class="reveal">真人视频：调动脸部与肢体动作</h2>
+        <div class="card-grid two reveal">
+          <article class="info-card">
+            <strong>初版（太笼统）</strong>
+            <span>女生不屑地看着前方</span>
+          </article>
+          <article class="info-card">
+            <strong>优化版（肌肉级别）</strong>
+            <span>女生眼睑微压低瞳孔短暂停留。她转头将视线冷淡地扫开，翻了个白眼，下颌轻微又轻抬，嘴角出现极短暂地下压，轻微耸肩，不屑。</span>
+          </article>
+        </div>
+        <ul class="bullet-list reveal" style="margin-top: var(--gap);">
+          <li>将抽象情绪拆解为具体肌肉动作（眼睑、瞳孔、嘴角、下颌、肩膀）</li>
+          <li>加入时序关系（"短暂停留"→"转头"→"翻白眼"→"下颌轻抬"）</li>
+          <li>每个动作都给了幅度修饰词（"微压""极短暂""轻微"），避免动作过大</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 20 真人视频：肤质 ===== -->
+  <section id="slide-20" class="slide light" data-kicker="E20 / REALFACE">
+    <div class="slide-content">
+      <div class="copy-block wide">
+        <h2 class="reveal">真人视频：让肤质更加真实</h2>
+        <div class="card-grid two reveal">
+          <article class="info-card">
+            <strong>初版（塑料感）</strong>
+            <span>图书馆里一位年轻女学生的特写肖像，坐在带台灯的木桌旁，拿着笔的手托着脸看镜头。</span>
+          </article>
+          <article class="info-card">
+            <strong>优化版（加瑕疵）</strong>
+            <span>...可见的皮肤毛孔，因思考眯眼而产生的眼角自然细纹，熬夜带来的轻微黑眼圈与皮肤瑕疵。</span>
+          </article>
+        </div>
+        <ul class="bullet-list reveal" style="margin-top: var(--gap);">
+          <li>主动添加"瑕疵"描述（毛孔、细纹、黑眼圈），打破 AI 的"完美皮肤"默认倾向</li>
+          <li>瑕疵与场景逻辑自洽（"熬夜"呼应"图书馆学习"）</li>
+          <li>用"自然"修饰，避免瑕疵过度导致恐怖谷效应</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 21 真人视频：情绪 ===== -->
+  <section id="slide-21" class="slide dark" data-kicker="E21 / REALFACE">
+    <div class="slide-content">
+      <div class="copy-block wide">
+        <h2 class="reveal">真人视频：情绪的表现</h2>
+        <p class="body-text reveal">写悲伤，不一定是直接呈现哭泣。通过"状态描写"传递情绪比直接写"哭"更有感染力。</p>
+        <div class="codebox reveal">女生脸上挂着未干的泪痕，眼神是剧烈哭泣后的空洞与麻木，随后，她缓慢且沉重地闭了一下眼睛，像是在隐忍泪意，嘴唇微微颤抖。</div>
+        <div class="card-grid two reveal" style="margin-top: var(--gap);">
+          <article class="info-card"><strong>痕迹描写</strong><span>"未干的泪痕" → 暗示已经哭过，而非正在哭</span></article>
+          <article class="info-card"><strong>眼神状态</strong><span>"空洞与麻木" → 哭泣后的疲惫感</span></article>
+          <article class="info-card"><strong>动作节奏</strong><span>"缓慢且沉重地闭了一下眼睛" → 用慢动作传递情绪重量</span></article>
+          <article class="info-card"><strong>微表情</strong><span>"嘴唇微微颤抖" → 隐忍的信号，克制比释放更有张力</span></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 22 AI Agent 应用 ===== -->
+  <section id="slide-22" class="slide light" data-kicker="E22 / AGENT">
+    <div class="slide-content">
+      <div class="copy-block wide">
+        <h2 class="reveal">AI Agent 在工作流中的应用</h2>
+        <p class="body-text reveal">有了 Agent，哪些步骤可以用 AI 做？</p>
+        <div class="card-grid three reveal">
+          <article class="info-card"><strong>视频策划</strong><span>将公司审美偏好制作成 Skill → 丢一个 brief 给 Agent，自动生成视频策划案</span></article>
+          <article class="info-card"><strong>撰写提示词</strong><span>将写提示词的偏好制作成 Skill → Agent 撰写初版提示词</span></article>
+          <article class="info-card"><strong>剪辑</strong><span>AI 剪辑能做到什么程度？（当前探索中）Remotion / 剪映 API / Hermes</span></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 23 为什么需要 Skill ===== -->
+  <section id="slide-23" class="slide dark" data-kicker="E23 / AGENT">
+    <div class="slide-content">
+      <div class="copy-block wide">
+        <h2 class="reveal">为什么需要 Skill</h2>
+        <p class="body-text reveal">一条 30 秒的片子目前大概需要 8-10 个镜头，其中环境、人物形象等元素是高度重复的。</p>
+        <div class="card-grid three reveal">
+          <article class="info-card"><strong>一致性问题</strong><span>同一角色在 8-10 个镜头中需要保持外貌一致</span></article>
+          <article class="info-card"><strong>效率问题</strong><span>逐条手写提示词耗时且容易遗漏关键约束</span></article>
+          <article class="info-card"><strong>风格统一</strong><span>不同镜头的运镜风格、色调、画质标准需要保持统一</span></article>
+        </div>
+        <p class="note reveal" style="margin-top: var(--gap);">通过制作 Skill，让 Agent 接管这些重复性工作，人只需要审核和微调。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 24 课堂互动 ===== -->
+  <section id="slide-24" class="slide light" data-kicker="E24 / INTERACT">
+    <div class="slide-content">
+      <div class="split-layout">
+        <div class="copy-block">
+          <h2 class="reveal">课堂互动：视频质量评估</h2>
+          <div class="card-grid two reveal">
+            <article class="info-card"><strong>Q1</strong><span>你觉得这个视频质量如何？→ 建立质量基线</span></article>
+            <article class="info-card"><strong>Q2</strong><span>制作需要多久？→ 打破"一键生成"偏差</span></article>
+            <article class="info-card"><strong>Q3</strong><span>写提示词难吗？→ 引出 Skill 必要性</span></article>
+          </div>
+        </div>
+        <div class="media-block reveal">
+          <video controls muted preload="metadata" playsinline src="media/audio-ad-demo.mp4"></video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 25 Skill 制作过程 ===== -->
+  <section id="slide-25" class="slide dark" data-kicker="E25 / SKILL">
+    <div class="slide-content">
+      <div class="split-layout">
+        <div class="copy-block">
+          <h2 class="reveal">制作 Skill 的过程</h2>
+          <div class="flow reveal">
+            <span class="node">获取基础 Skill</span>
+            <span class="arrow">→</span>
+            <span class="node">和 ChatGPT 讨论需求</span>
+            <span class="arrow">→</span>
+            <span class="node">明确融合方案</span>
+            <span class="arrow">→</span>
+            <span class="node">厘清交付物与流程</span>
+            <span class="arrow">→</span>
+            <span class="node">调优迭代</span>
+          </div>
+        </div>
+        <div class="media-block reveal">
+        <img class="asset" src="assets/image-20260708205642.png" alt="基础Skill获取">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 26 Skill 核心需求表述 ===== -->
+  <section id="slide-26" class="slide light" data-kicker="E26 / SKILL">
+    <div class="slide-content">
+      <div class="copy-block wide">
+        <h2 class="reveal">Skill 制作：需求讨论</h2>
+        <div class="codebox reveal">核心需求：我要做 AI 短视频。视频的分镜图片和生成视频的提示词通常需要
+非常详细。我希望有一个 Skill 能够分析我的故事剧情、人物，并为我生成对应
+的详细提示词。我的作品风格可能会比较多样，所以我在想是固定一个风格的
+Skill，还是在同一个 Skill 中通过关键词切换风格。</div>
+        <div class="codebox reveal" style="margin-top: var(--gap);">厘清交付物：我希望明确——目前的这个流程，它交付的内容是什么？流程的
+Skill 走完以后它交付的是什么东西？资产积累不应该放在交付的部分，分析步
+骤里夹杂了交付，而分析部分又放在了不正确的位置。请你重新调整一下。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 27 Skill 调优迭代 ===== -->
+  <section id="slide-27" class="slide dark" data-kicker="E27 / SKILL">
+    <div class="slide-content">
+      <div class="copy-block wide">
+        <h2 class="reveal">Skill 调优迭代</h2>
+        <div class="codebox reveal">我尝试跑了一条视频以后，觉得它给的分镜逻辑不是特别好，经常会有空间的
+错乱或者是一些动作不衔接的地方。这个是否能给一个提示词去优化它的分镜
+分析，还是分镜产出的那一部分 Skill 的包装可以保留更多一点？</div>
+        <div class="chip-row reveal" style="margin-top: var(--gap);">
+          <span class="chip">故事分析</span>
+          <span class="chip">人物锁定</span>
+          <span class="chip">分镜连续性</span>
+          <span class="chip">提示词产出</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 28 Skill 文件结构 ===== -->
+  <section id="slide-28" class="slide light" data-kicker="E28 / SKILL">
+    <div class="slide-content">
+      <div class="copy-block wide">
+        <h2 class="reveal">ai-director Skill 文件结构</h2>
+        <div class="codebox reveal">ai-director/
+  SKILL.md                          ← 核心入口，定义触发条件、输入要求、工作流程
+  README.md                         ← 使用说明和安装指南
+  references/                       ← 工作流各阶段的详细规则
+    input-schema.md                 ← 步骤1：输入整理规则
+    story-function-analysis.md      ← 步骤2：故事功能分析
+    storyboard-continuity.md        ← 步骤3：分镜连续性引擎
+    style-translation.md            ← 步骤4：风格翻译
+    consistency-lock.md             ← 步骤5：角色/世界/风格锁定
+    shot-card.md                    ← 步骤6：标准镜头卡
+    prompt-generator.md             ← 步骤7：提示词生成融合规则
+    image-prompt.md                 ← 步骤8：图片提示词
+    video-prompt.md                 ← 步骤9：视频提示词
+    prompt-qa.md                    ← 步骤10：提示词质量检查
+    output-package.md               ← 输出打包格式</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 29 SKILL.md 核心内容 ===== -->
+  <section id="slide-29" class="slide dark" data-kicker="E29 / SKILL">
+    <div class="slide-content">
+      <div class="copy-block wide">
+        <h2 class="reveal">SKILL.md 核心内容</h2>
+        <div class="card-grid three reveal">
+          <article class="info-card"><strong>Frontmatter</strong><span>name + description，告诉 Codex 何时触发这个 Skill</span></article>
+          <article class="info-card"><strong>Trigger Handling</strong><span>触发关键词："我要制作 AI 短片""生成 Prompt 包"等</span></article>
+          <article class="info-card"><strong>Required Inputs</strong><span>接受的输入类型：故事背景、风格参考、分镜等</span></article>
+          <article class="info-card"><strong>Workflow</strong><span>10 步工作流的执行顺序，每步引用对应的 reference 文件</span></article>
+          <article class="info-card"><strong>Core Rules</strong><span>先分析再生成、保持一致性、标注系统补全等</span></article>
+          <article class="info-card"><strong>Separation Rule</strong><span>Skill 和项目文件分离，不复制到项目文件夹</span></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 30 Skill 10步工作流 ===== -->
+  <section id="slide-30" class="slide light" data-kicker="E30 / SKILL">
+    <div class="slide-content">
+      <div class="copy-block wide">
+        <h2 class="reveal">Skill 10 步工作流</h2>
+        <div class="flow reveal">
+          <span class="node">①输入整理</span>
+          <span class="arrow">→</span>
+          <span class="node">②故事功能分析</span>
+          <span class="arrow">→</span>
+          <span class="node">③分镜连续性引擎</span>
+          <span class="arrow">→</span>
+          <span class="node">④风格翻译</span>
+          <span class="arrow">→</span>
+          <span class="node">⑤角色/世界/风格锁定</span>
+        </div>
+        <div class="flow reveal" style="margin-top: var(--gap);">
+          <span class="node">⑥标准镜头卡</span>
+          <span class="arrow">→</span>
+          <span class="node">⑦提示词生成融合</span>
+          <span class="arrow">→</span>
+          <span class="node">⑧图片提示词</span>
+          <span class="arrow">→</span>
+          <span class="node">⑨视频提示词</span>
+          <span class="arrow">→</span>
+          <span class="node">⑩质量检查</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 31 Skill 输入 ===== -->
+  <section id="slide-31" class="slide dark" data-kicker="E31 / SKILL">
+    <div class="slide-content">
+      <div class="copy-block wide">
+        <h2 class="reveal">Skill 输入：用户提供的原始素材</h2>
+        <p class="body-text reveal">用户只需要提供一个简单的故事描述。没有分镜编号、没有镜头语言、没有风格参考——这些全部由 Skill 自动补全。</p>
+        <div class="codebox reveal">世界观：现代
+视频长度：30s
+目的：我要做一个皮克斯风格的广告
+销售产品：音响
+
+产品故事：
+音响能给人身临其境的感觉，开着音响的时候觉得自己在短剧片场当总裁。
+被人关了音响才发现自己在做产品的 ppt 的时候睡着了。
+回到蓝色调的忧郁色调的房间。
+妈妈为她切换了一首温馨的音乐，房间变成暖黄色的，她伸了个懒腰继续做 ppt。
+
+人物：
+女主：长头发卷发，产品经理。短剧场景里，她是大女主形象。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 32 Skill 输出概览 ===== -->
+  <section id="slide-32" class="slide light" data-kicker="E32 / SKILL">
+    <div class="slide-content">
+      <div class="copy-block wide">
+        <h2 class="reveal">Skill 输出：AI短片 Prompt 包</h2>
+        <div class="card-grid three reveal">
+          <article class="info-card"><strong>① 项目总览</strong><span>项目名称、一句话概括、核心情绪、风格方向、镜头数量、预计时长</span></article>
+          <article class="info-card"><strong>② 输入内容整理</strong><span>人物/场景/道具/风格参考的结构化整理，标注缺失信息和系统补全</span></article>
+          <article class="info-card"><strong>③ 故事与风格分析</strong><span>每个镜头的叙事功能、角色目标、情绪目标、视觉重点 + 风格翻译结果</span></article>
+          <article class="info-card"><strong>④ 连续性报告</strong><span>空间/人物位置/人物状态/道具状态/时间的连续性台账 + 问题及修正建议</span></article>
+          <article class="info-card"><strong>⑤ 角色锁/世界锁/风格锁</strong><span>外貌/服装/气质/动作习惯锁定；建筑/道具/色彩锁定；摄影/灯光/质感锁定</span></article>
+          <article class="info-card"><strong>⑥ 标准镜头卡</strong><span>每个镜头的景别/构图/光线/焦段/运镜/时长/声音提示/连续性状态</span></article>
+          <article class="info-card"><strong>⑦ 图片 Prompt 包</strong><span>中文+英文图片提示词 + 负面提示词 + 各平台建议 + Source Trace</span></article>
+          <article class="info-card"><strong>⑧ 视频 Prompt 包</strong><span>中文+英文视频提示词 + 运动控制 + 负面提示词 + 平台适配 + Source Trace</span></article>
+          <article class="info-card"><strong>⑨ QA 报告</strong><span>每个镜头的通过项/风险项/修改建议/连续性检查/注入检查</span></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 33 Source Trace ===== -->
+  <section id="slide-33" class="slide dark" data-kicker="E33 / SKILL">
+    <div class="slide-content">
+      <div class="copy-block wide">
+        <h2 class="reveal">Source Trace 来源追溯</h2>
+        <p class="body-text reveal">每条提示词都带来源追溯，确认 Character/World/Style/Shot 四个维度是否都正确注入，防止"只写了画面但漏了角色设定"。</p>
+        <div class="card-grid two reveal">
+          <article class="info-card"><strong>Character 来源</strong><span>年轻职场女性产品经理、长卷发、大眼睛、圆润脸颊、浅色居家针织衫、眼皮微沉</span></article>
+          <article class="info-card"><strong>World 来源</strong><span>现代城市公寓小书房、冷蓝夜晚、笔记本电脑、哑光深灰圆角智能音响</span></article>
+          <article class="info-card"><strong>Style 来源</strong><span>皮克斯式 3D 动画广告、35mm 中近景、冷蓝环境与暖色光环、干净细腻材质</span></article>
+          <article class="info-card"><strong>Shot 来源</strong><span>音响启动、第一圈暖色光环、小妞疲惫做 PPT、连续性状态</span></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 34 Skill 经验总结 ===== -->
+  <section id="slide-34" class="slide light" data-kicker="E34 / SKILL">
+    <div class="slide-content">
+      <div class="copy-block wide">
+        <h2 class="reveal">Skill 制作经验总结</h2>
+        <div class="card-grid three reveal">
+          <article class="info-card"><strong>需求定义</strong><span>明确"交付物是什么"比"功能列表"更重要</span></article>
+          <article class="info-card"><strong>流程设计</strong><span>确保输入 → 分析 → 交付的顺序正确，不要把交付混入分析步骤</span></article>
+          <article class="info-card"><strong>迭代调优</strong><span>实际跑一条视频后才发现分镜逻辑问题 → 强化分镜转场和空间连续性约束</span></article>
+          <article class="info-card"><strong>Skill 融合</strong><span>多个 Skill 融合时，关键是定义好调用关系和数据流转</span></article>
+          <article class="info-card"><strong>Source Trace</strong><span>每条提示词都带来源追溯，方便排查"哪个维度出了问题"</span></article>
+          <article class="info-card"><strong>系统补全标注</strong><span>Skill 自动补全的内容必须标注"系统补全"，让用户知道哪些是 AI 推断的</span></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 35 Codex + Remotion ===== -->
+  <section id="slide-35" class="slide dark" data-kicker="E35 / EDIT">
+    <div class="slide-content">
+      <div class="copy-block wide">
+        <h2 class="reveal">Codex 的 AI 剪辑：Remotion 方案</h2>
+        <div class="card-grid two reveal">
+          <article class="info-card"><strong>输入</strong><span>一个 Logo 图片</span></article>
+          <article class="info-card"><strong>提示词</strong><span>运用 Remotion，帮我创建一个 30 秒的产品 MG 动画演示，使用文件夹内的 Logo，16:9</span></article>
+          <article class="info-card"><strong>首版速度</strong><span>渲染约 30 分钟</span></article>
+          <article class="info-card"><strong>迭代速度</strong><span>更改配色、增加音乐、点击反馈：5-6 分钟</span></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 36 Remotion 优势与局限 ===== -->
+  <section id="slide-36" class="slide light" data-kicker="E36 / EDIT">
+    <div class="slide-content">
+      <div class="copy-block wide">
+        <h2 class="reveal">Remotion 优势与局限</h2>
+        <div class="card-grid two reveal">
+          <article class="info-card"><strong>速度</strong><span>首版约 30 分钟，迭代版 5-6 分钟</span></article>
+          <article class="info-card"><strong>可控性</strong><span>通过代码控制，精确度高</span></article>
+          <article class="info-card"><strong>适用类型</strong><span>MG 动画、数据可视化、品牌宣传</span></article>
+          <article class="info-card"><strong>局限</strong><span>不适合复杂实拍素材剪辑；需要一定的代码基础或 AI 辅助编码</span></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 37 Claude AI 剪辑 ===== -->
+  <section id="slide-37" class="slide dark" data-kicker="E37 / EDIT">
+    <div class="slide-content">
+      <div class="copy-block wide">
+        <h2 class="reveal">Claude 的 AI 剪辑能力</h2>
+        <div class="card-grid two reveal">
+          <article class="info-card"><strong>输入</strong><span>产品的 Logo + 产品的文字介绍 + 产品的界面截图</span></article>
+          <article class="info-card"><strong>提示词</strong><span>制作 30s 的产品介绍视频</span></article>
+          <article class="info-card"><strong>耗时</strong><span>渲染约 3-4 小时出第一版预览</span></article>
+          <article class="info-card"><strong>对比 Codex</strong><span>首版慢、迭代慢，但适合产品功能展示类视频</span></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 38 Codex vs Claude 对比 ===== -->
+  <section id="slide-38" class="slide light" data-kicker="E38 / EDIT">
+    <div class="slide-content">
+      <div class="copy-block wide">
+        <h2 class="reveal">Codex + Remotion vs Claude 对比</h2>
+        <div class="card-grid two reveal">
+          <article class="info-card"><strong>Codex + Remotion</strong><span>首版 ~30 min｜迭代 5-6 min｜输入：Logo + 提示词｜MG 动画为主｜品牌宣传/数据动画</span></article>
+          <article class="info-card"><strong>Claude</strong><span>首版 3-4 h｜迭代较慢｜输入：Logo + 文字介绍 + 截图｜产品介绍视频｜功能展示</span></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 39 飞书调 Hermes 介绍 ===== -->
+  <section id="slide-39" class="slide dark" data-kicker="E39 / HERMES">
+    <div class="slide-content">
+      <div class="copy-block wide">
+        <h2 class="reveal">运用飞书调 Hermes（接 deepseek）进行剪辑</h2>
+        <p class="body-text reveal">开着电脑维持链接即可对话，可以推送视频文件。Hermes 更像一个"远程可调用的剪辑执行端"。</p>
+        <div class="flow reveal">
+          <span class="node">建立连接</span>
+          <span class="arrow">→</span>
+          <span class="node">接收文本指令</span>
+          <span class="arrow">→</span>
+          <span class="node">接收素材文件</span>
+          <span class="arrow">→</span>
+          <span class="node">任务识别</span>
+          <span class="arrow">→</span>
+          <span class="node">执行反馈</span>
+          <span class="arrow">→</span>
+          <span class="node">返回结果</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 40 Hermes 步骤 1-2 ===== -->
+  <section id="slide-40" class="slide light" data-kicker="E40 / HERMES">
+    <div class="slide-content">
+      <div class="split-layout">
+        <div class="media-block reveal">
+        <img class="asset" src="assets/image-20260708203723.png" alt="说明1：建立可对话、可接收任务的连接状态">
+        </div>
+        <div class="media-block reveal">
+        <img class="asset" src="assets/image-20260708203744.png" alt="说明2：确认可以接收文本指令">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 41 Hermes 步骤 3-4 ===== -->
+  <section id="slide-41" class="slide dark" data-kicker="E41 / HERMES">
+    <div class="slide-content">
+      <div class="split-layout">
+        <div class="media-block reveal">
+        <img class="asset" src="assets/image-20260708203818.png" alt="说明3：确认可以接收素材或视频文件">
+        </div>
+        <div class="media-block reveal">
+        <img class="asset" src="assets/image-20260708203839.png" alt="说明4：检查任务是否被正确识别">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 42 Hermes 步骤 5-6 ===== -->
+  <section id="slide-42" class="slide light" data-kicker="E42 / HERMES">
+    <div class="slide-content">
+      <div class="split-layout">
+        <div class="media-block reveal">
+        <img class="asset" src="assets/image-20260708203937.png" alt="说明5：观察执行中的反馈信息">
+        </div>
+        <div class="media-block reveal">
+        <img class="asset" src="assets/image-20260708203956.png" alt="说明6：如果理解偏差，需要回到指令层做补充约束">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 43 Hermes 步骤 7-8 ===== -->
+  <section id="slide-43" class="slide dark" data-kicker="E43 / HERMES">
+    <div class="slide-content">
+      <div class="split-layout">
+        <div class="media-block reveal">
+        <img class="asset" src="assets/image-20260708204021.png" alt="说明7：继续追踪执行状态与产物返回">
+        </div>
+        <div class="media-block reveal">
+        <img class="asset" src="assets/image-20260708204107.png" alt="说明8：拿到最终返回结果或中间结果">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 44 Hermes 完整流程：Storyboard ===== -->
+  <section id="slide-44" class="slide light" data-kicker="E44 / HERMES">
+    <div class="slide-content">
+      <div class="split-layout">
+        <div class="copy-block">
+          <h2 class="reveal">（1）Storyboard 故事板</h2>
+          <p class="body-text reveal">先把故事板作为结构化输入给到剪辑执行端，而不是直接丢一句"帮我剪个视频"。</p>
+        </div>
+        <div class="media-block reveal">
+        <img class="asset" src="assets/image-20260708211847.png" alt="Storyboard故事板">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 45 Hermes 完整流程：飞书呼唤 ===== -->
+  <section id="slide-45" class="slide dark" data-kicker="E45 / HERMES">
+    <div class="slide-content">
+      <div class="split-layout">
+        <div class="copy-block">
+          <h2 class="reveal">（2）通过飞书呼唤 Hermes</h2>
+          <p class="body-text reveal">把故事板、任务目标和执行指令串起来，形成可执行请求。</p>
+        </div>
+        <div class="media-block reveal">
+        <img class="asset" src="assets/image-20260708212211.png" alt="飞书呼唤Hermes">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 46 Hermes 完整流程：出Bug调优 ===== -->
+  <section id="slide-46" class="slide light" data-kicker="E46 / HERMES">
+    <div class="slide-content">
+      <div class="split-layout">
+        <div class="copy-block">
+          <h2 class="reveal">（3）出 Bug — 调优</h2>
+          <p class="body-text reveal">向学员展示真实工作流里"第一次不一定成功"，调优是常态，不是例外。</p>
+        </div>
+        <div class="media-block reveal">
+        <img class="asset" src="assets/image-20260708212302.png" alt="出Bug调优">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 47 Hermes 完整流程：出结果 ===== -->
+  <section id="slide-47" class="slide dark" data-kicker="E47 / HERMES">
+    <div class="slide-content">
+      <div class="split-layout">
+        <div class="copy-block">
+          <h2 class="reveal">（4）出结果</h2>
+          <p class="body-text reveal">Hermes 这条路径的价值不在于一次完美，而在于它把"远程执行剪辑"这件事跑通了。</p>
+        </div>
+        <div class="media-block reveal">
+        <img class="asset" src="assets/image-20260708212526.png" alt="出结果">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 48 chatcut 剧情类：沟通过程 1 ===== -->
+  <section id="slide-48" class="slide light" data-kicker="E48 / CHATCUT">
+    <div class="slide-content">
+      <div class="split-layout">
+        <div class="copy-block">
+          <h2 class="reveal">Codex + chatcut：剧情类短片</h2>
+          <p class="body-text reveal">通过对话式交互，逐步明确剪辑需求。</p>
+          <p class="note reveal">成片：<a href="https://www.xiaohongshu.com/discovery/item/6a562cc9000000001003c5f6?source=webshare&xhsshare=pc_web&xsec_token=ABOdydZW4GE5lqIAtk8hvLssf8MnIK9gIt-S1EQf509DA=&xsec_source=pc_share" target="_blank" rel="noopener">AI剪辑 x dv版甄嬛传 — 小红书</a></p>
+        </div>
+        <div class="media-block reveal">
+        <img class="asset" src="assets/image-20260719105926.png" alt="chatcut沟通过程1">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 49 chatcut 剧情类：沟通过程 2 ===== -->
+  <section id="slide-49" class="slide dark" data-kicker="E49 / CHATCUT">
+    <div class="slide-content">
+      <div class="split-layout">
+        <div class="media-block reveal">
+        <img class="asset" src="assets/image-20260719105950.png" alt="chatcut沟通过程2">
+        </div>
+        <div class="media-block reveal">
+        <img class="asset" src="assets/image-20260719110011.png" alt="chatcut沟通过程3">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 50 chatcut 剧情类：沟通过程 3 ===== -->
+  <section id="slide-50" class="slide light" data-kicker="E50 / CHATCUT">
+    <div class="slide-content">
+      <div class="split-layout">
+        <div class="copy-block">
+          <h2 class="reveal">chatcut 沟通细节</h2>
+          <p class="body-text reveal">持续对话完善剪辑效果。</p>
+        </div>
+        <div class="media-block reveal">
+        <img class="asset" src="assets/image-20260719110047.png" alt="chatcut沟通过程4">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 51 chatcut 口播类：SRT输出 ===== -->
+  <section id="slide-51" class="slide dark" data-kicker="E51 / CHATCUT">
+    <div class="slide-content">
+      <div class="split-layout">
+        <div class="copy-block">
+          <h2 class="reveal">Codex + chatcut：口播类短片</h2>
+          <ul class="bullet-list reveal">
+            <li>先让剪映或 codex 出一次字幕文件，基于字幕文件和 AI 进行文字修改的讨论</li>
+            <li>按文字稿录制的多段素材可让 codex 拼接，一段素材可让 codex 去口水话</li>
+            <li>确认基本完成后加入 B-roll 素材和字幕</li>
+            <li>chatcut 的转写不会有多余口癖字（"啊、嗯、哦"）</li>
+          </ul>
+          <p class="note reveal" style="margin-top: var(--gap);">参考时长：21 分钟的单条视频耗时 15 分钟左右输出 SRT</p>
+        </div>
+        <div class="media-block reveal">
+        <img class="asset" src="assets/image-20260719111244.png" alt="口播类SRT输出">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 52 chatcut 口播类：SRT讨论 ===== -->
+  <section id="slide-52" class="slide light" data-kicker="E52 / CHATCUT">
+    <div class="slide-content">
+      <div class="split-layout">
+        <div class="copy-block">
+          <h2 class="reveal">基于 SRT 进行文稿/视频结构讨论</h2>
+          <p class="body-text reveal">分析 SRT 耗时约 20s。如果按文字稿录制，多段素材可让 codex 拼接，一段素材可去口水话。</p>
+        </div>
+        <div class="media-block reveal">
+        <img class="asset" src="assets/image-20260719112706.png" alt="口播类SRT讨论">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 53 chatcut 口播类：B-roll ===== -->
+  <section id="slide-53" class="slide dark" data-kicker="E53 / CHATCUT">
+    <div class="slide-content">
+      <div class="split-layout">
+        <div class="copy-block">
+          <h2 class="reveal">增加字幕和 B-roll 素材</h2>
+          <p class="body-text reveal">确认基本完成后加入 B-roll 和字幕。耗时约 10 分钟。</p>
+          <ul class="bullet-list reveal">
+            <li>剪映自动识别字幕是无脑识别，需自己删除口癖</li>
+            <li>chatcut 转写不会有多余口癖字</li>
+            <li>可固定字体大小、字体、颜色等</li>
+          </ul>
+        </div>
+        <div class="media-block reveal">
+        <img class="asset" src="assets/image-20260719113336.png" alt="口播类B-roll字幕">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 54 总结 ===== -->
+  <section id="slide-54" class="slide light title-slide" data-kicker="E54 / RECAP">
+    <div class="slide-content">
+      <div class="title-grid">
+        <div class="title-copy">
+          <p class="eyebrow reveal">Session 1 / Recap</p>
+          <h1 class="reveal"><span>核心回顾</span></h1>
+          <p class="lede reveal">AI 视频制作的完整链路已经打通，关键是找到适合自己的组合。</p>
+        </div>
+        <img class="hero-asset reveal" src="assets/08-skill-workflow.svg" alt="">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 55 总结要点 ===== -->
+  <section id="slide-55" class="slide dark" data-kicker="E55 / RECAP">
+    <div class="slide-content">
+      <div class="copy-block wide">
+        <h2 class="reveal">本节要点</h2>
+        <div class="card-grid two reveal">
+          <article class="info-card"><strong>六步流程</strong><span>策划 → 提示词 → 文生图 → 文生视频 → 剪辑 → 交付</span></article>
+          <article class="info-card"><strong>提示词公式</strong><span>主体 + 动作 + 场景 + 光影 + 镜头 + 风格 + 画质 + 约束</span></article>
+          <article class="info-card"><strong>Skill 让重复工作自动化</strong><span>8-10 个镜头的一致性和效率问题交给 Agent</span></article>
+          <article class="info-card"><strong>多种 AI 剪辑路径</strong><span>Remotion / Claude / Hermes / chatcut 各有优势场景</span></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="presentation-controller.js"></script>
+</body>
+</html>
