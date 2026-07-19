@@ -31,9 +31,9 @@
     .slide.dark { background: var(--black); color: var(--white); }
     .slide-content { flex: 1; min-height: 0; max-height: 100%; display: flex; flex-direction: column; justify-content: center; padding: var(--slide-padding-y) var(--slide-padding-x); }
     .slide::before { content: attr(data-kicker); position: absolute; top: clamp(1rem, 1.8vw, 1.8rem); left: var(--slide-padding-x); font-family: var(--font-mono); font-size: var(--small-size); opacity: .72; z-index: 5; }
-    .slide::after { content: ""; position: absolute; top: clamp(.9rem, 1.65vw, 1.65rem); right: var(--slide-padding-x); width: clamp(8.6rem, 13vw, 12.5rem); height: clamp(1.6rem, 2.8vw, 2.45rem); background: url("HTML素材/SHENICEST logo/logo_blackpink_01.png") center / contain no-repeat; z-index: 5; }
+    .slide::after { content: ""; position: absolute; top: clamp(.9rem, 1.65vw, 1.65rem); right: var(--slide-padding-x); width: clamp(8.6rem, 13vw, 12.5rem); height: clamp(1.6rem, 2.8vw, 2.45rem); background: url("assets/logo-blackpink.png") center / contain no-repeat; z-index: 5; }
     .dark::before { color: var(--muted-white); }
-    .dark::after { background-image: url("HTML素材/SHENICEST logo/logo_whitepink_01.png"); }
+    .dark::after { background-image: url("assets/logo-whitepink.png"); }
     .progress-bar { position: fixed; top: 0; left: 0; height: 4px; width: 0%; background: var(--pink); z-index: 9999; transition: width .16s linear; }
     .nav-dots { position: fixed; right: clamp(.55rem, 1vw, 1rem); top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 7px; z-index: 200; }
     .nav-dot { width: 7px; height: 7px; border: 1px solid currentColor; background: transparent; cursor: pointer; opacity: .7; }
